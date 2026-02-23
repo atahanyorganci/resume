@@ -2,7 +2,7 @@
   description = "Resume with Typst";
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     devshell.url = "github:numtide/devshell";
   };
   outputs = inputs@{ flake-parts, ... }:
@@ -15,6 +15,8 @@
         devshells.default = {
           packages = with pkgs; [
             nixpkgs-fmt
+            typst
+            just
           ];
         };
       };

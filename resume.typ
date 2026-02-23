@@ -166,6 +166,9 @@
     if "git" in content {
         quick_link("Repository", "icons/git.png", href: content.git, spacing: 2pt, order: "c-i")
     }
+    if "website" in content {
+        quick_link("Website", "icons/world.png", href: content.website, spacing: 2pt, order: "c-i")
+    }
 })
 
 #let personal_projects(content) = {
@@ -203,9 +206,8 @@
 
 #show: rest => columns(2, rest)
 
-#education(content.education)
 #work_experience(content.workExperience)
-#skills(content.skills)
+#education(content.education)
 #personal_projects(content.personalProjects)
+#skills(content.skills)
 #languages(content.languages)
-#interests(content.interests)
